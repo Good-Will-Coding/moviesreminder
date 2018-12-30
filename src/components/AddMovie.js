@@ -12,6 +12,8 @@ class AddMovie extends Component {
     this.props.addMovieAction(this.state.term);
   };
 
+ 
+
   render() {
     return (
       <div className="ui container">
@@ -37,7 +39,7 @@ class AddMovie extends Component {
 
 const mapStateToProps = state => {
   return {
-    movie: state.movie
+    movies: state.movie
   };
 };
 
