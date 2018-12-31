@@ -1,6 +1,8 @@
-import { ADD_MOVIE } from '../constants/actionTypes';
+import { ADD_MOVIE, DELETE_MOVIE } from '../constants/actionTypes';
 
-const addMovie = (movie) => {
+
+
+export const addMovie = (movie) => {
     return {
         type: ADD_MOVIE,
         id: Math.random(),
@@ -8,4 +10,9 @@ const addMovie = (movie) => {
     }
 }
 
-export default addMovie;
+export const deleteMovie = id => {
+    return {
+        type: DELETE_MOVIE,
+        id
+    }
+}

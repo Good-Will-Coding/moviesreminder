@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import addMovieAction from "../actions/index";
+import { addMovie } from "../actions/index";
 
 class AddMovie extends Component {
   state = {
@@ -9,7 +9,7 @@ class AddMovie extends Component {
 
   addMovieHandler = e => {
     e.preventDefault();
-    this.props.addMovieAction(this.state.term);
+    this.props.addMovie(this.state.term);
   };
 
  
@@ -43,7 +43,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  addMovieAction
+  addMovie
 };
 
 export default connect(
