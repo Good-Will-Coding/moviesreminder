@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AddMovie from "./AddMovie";
 import MovieList from "./MovieList";
+import Title from "./Title";
 
 import "./App.css";
 
@@ -9,9 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="ui container center aligned">
-          <div className="title">
-            <h1>Movies to Watch Reminder</h1>
-          </div>
+          <Title />
           <AddMovie />
 
           <div className="ui divided items">

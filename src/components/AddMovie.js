@@ -7,13 +7,12 @@ class AddMovie extends Component {
     term: ""
   };
 
-  addMovie = e => {
+  addMovieHandler = e => {
     e.preventDefault();
     this.props.addMovieAction(this.state.term);
   };
 
  
-
   render() {
     return (
       <div className="ui container">
@@ -26,7 +25,7 @@ class AddMovie extends Component {
                 onChange={e => this.setState({ term: e.target.value })}
                 value={this.state.term}
               />
-              <button onClick={this.addMovie} className="ui button primary">
+              <button onClick={this.addMovieHandler} className="ui button primary">
                 Add Movie
               </button>
             </div>

@@ -5,15 +5,18 @@ import "./MovieList.css";
 class MovieList extends Component {
   renderMovies() {
     const { movies } = this.props;
-    return (
-      <div className="container">
-          <ul className="ui list selection list ">
-            {movies.map(movie => {
-              return <li className="item">{movie}</li>;
-            })}
-          </ul>
-      </div>
-    );
+    return movies.map(movieAdded => {
+      return (
+        <ul key={movieAdded.id}>
+          <li>
+            <div>
+              {movieAdded.movie}
+              <i className="close icon" />
+            </div>
+          </li>
+        </ul>
+      );
+    });
   }
   render() {
     return <div>{this.renderMovies()}</div>;
