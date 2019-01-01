@@ -5,7 +5,7 @@ const Title = () => {
   return (
     <div>
       <div className="title">
-        <h1>Movies to Watch Reminder</h1>
+        <h1>Movies to Watch <i class="film icon"></i></h1>
       </div>
     </div>
   );
