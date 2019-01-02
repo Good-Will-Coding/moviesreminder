@@ -1,18 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addMovie } from "../actions/index";
+import { addMovie } from "../actions";
+import FormValidationError from "./FormValidationError";
+
+import "./Movies.css";
 
 class AddMovie extends Component {
   state = {
-    term: ""
+    term: "",
+    formValidation: false
   };
 
+  // Add movie to list
   addMovieHandler = e => {
     e.preventDefault();
-    this.props.addMovie(this.state.term);
+    this.state.term === "" ? this.setState({ formValidation: !this.state.formValidation })
+    : this.props.addMovie(this.state.term);
+    this.setState({
+      term: ""
+    });
   };
 
- 
   render() {
     return (
       <div className="ui container">
@@ -22,7 +30,7 @@ class AddMovie extends Component {
               <input
                 type="text"
                 placeholder="Add movie..."
-                onChange={e => this.setState({ term: e.target.value })}
+                onChange={e => this.setState({ term: e.target.value, formValidation: false })}
                 value={this.state.term}
               />
               <button onClick={this.addMovieHandler} className="ui button primary">
@@ -30,6 +38,7 @@ class AddMovie extends Component {
               </button>
             </div>
           </form>
+          <FormValidationError error={this.state.formValidation} />
         </div>
       </div>
     );

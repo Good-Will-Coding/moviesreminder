@@ -4,6 +4,8 @@ import { deleteMovie } from "../actions/index";
 import "./MovieList.css";
 
 class MovieList extends Component {
+
+  // Remove movie from list
   deleteMovieHandler(id) {
     this.props.deleteMovie(id);
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AddMovie from "./AddMovie";
+import Movies from "./Movies";
 import MovieList from "./MovieList";
 import Title from "./Title";
 
@@ -11,8 +11,7 @@ class App extends Component {
       <div className="App">
         <div className="ui container center aligned">
           <Title />
-          <AddMovie />
-
+          <Movies />
           <div className="ui divided items">
             <MovieList />
           </div>
