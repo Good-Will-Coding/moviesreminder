@@ -2,7 +2,7 @@
 
 Movies to Watch is a web application that uses React, Redux, and SemanticUI.
 
-The goal of this project was to create an application that users may use to keep track of movies they want to watch at a later time.
+The goal of this project was to create an application to keep track of movies to watch at a later time.
 
 The live version that goes with this project can be found here:
 https://moviestowatch.netlify.com/
