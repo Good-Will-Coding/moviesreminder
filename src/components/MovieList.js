@@ -18,7 +18,7 @@ class MovieList extends Component {
           <li>
             <div className="ui middle aligned selection list">
               <div className="item">
-                {movieAdded.movie}
+                <span style={{color: "black"}}>{movieAdded.movie}</span>
                 <div
                   onClick={() => this.deleteMovieHandler(movieAdded.id)}
                   className="delete-button"
